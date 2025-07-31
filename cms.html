@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المعالم - دليل عسير السياحي</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <img src="admin-logo.png" alt="شعار الأدمن" class="admin-logo">
+            <h1>نظام إدارة المعالم السياحية</h1>
+            <nav class="admin-nav">
+                <a href="dashboard.html">الإحصائيات</a>
+                <a href="cms.html" class="active">إدارة المعالم</a>
+                <a href="#" id="logoutBtn">تسجيل الخروج</a>
+            </nav>
+        </header>
+
+        <main class="cms-content">
+            <section class="landmark-list">
+                <h2>قائمة المعالم</h2>
+                <button id="addLandmarkBtn" class="primary-btn">إضافة معلم جديد</button>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="ابحث عن معلم...">
+                    <button id="searchBtn" class="primary-btn">بحث</button>
+                </div>
+                
+                <table id="landmarksTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>الاسم</th>
+                            <th>الموقع</th>
+                            <th>الزيارات</th>
+                            <th>التفاعلات</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- سيتم ملؤها بالبيانات -->
+                    </tbody>
+                </table>
+            </section>
+            
+            <section class="landmark-form" id="landmarkForm" style="display: none;">
+                <h2 id="formTitle">إضافة معلم جديد</h2>
+                
+                <form id="editLandmarkForm">
+                    <input type="hidden" id="landmarkId">
+                    
+                    <div class="form-group">
+                        <label for="landmarkNameAr">الاسم (العربية):</label>
+                        <input type="text" id="landmarkNameAr" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkNameEn">الاسم (English):</label>
+                        <input type="text" id="landmarkNameEn" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkNameFr">الاسم (Français):</label>
+                        <input type="text" id="landmarkNameFr" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkNameEs">الاسم (Español):</label>
+                        <input type="text" id="landmarkNameEs" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkLat">خط العرض:</label>
+                        <input type="number" step="0.000001" id="landmarkLat" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkLng">خط الطول:</label>
+                        <input type="number" step="0.000001" id="landmarkLng" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkMapsUrl">رابط خرائط جوجل:</label>
+                        <input type="url" id="landmarkMapsUrl">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkDescAr">الوصف (العربية):</label>
+                        <textarea id="landmarkDescAr" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkDescEn">الوصف (English):</label>
+                        <textarea id="landmarkDescEn" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkDescFr">الوصف (Français):</label>
+                        <textarea id="landmarkDescFr" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkDescEs">الوصف (Español):</label>
+                        <textarea id="landmarkDescEs" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmarkRecs">التوصيات (أرقام ID للمعالم القريبة، مفصولة بفواصل):</label>
+                        <input type="text" id="landmarkRecs" placeholder="مثال: 002, 003, 005">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="primary-btn">حفظ</button>
+                        <button type="button" id="cancelEditBtn" class="secondary-btn">إلغاء</button>
+                        <button type="button" id="deleteLandmarkBtn" class="danger-btn" style="display: none;">حذف المعلم</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

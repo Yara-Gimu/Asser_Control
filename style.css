@@ -1,0 +1,356 @@
+/* عسير Admin Panel - تراث عصري */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe; /* أوف وايت مريح */
+    color: #1e1e1e; /* أسود ناعم */
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.admin-header {
+    background-color: #7b2e2e; /* أحمر عسيري */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-logo {
+    width: 60px;
+    height: auto;
+}
+
+.admin-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.admin-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.admin-nav a:hover {
+    background-color: #5c1f1f; /* أغمق لتمييز التفاعل */
+}
+
+.admin-nav a.active {
+    background-color: #f3c969; /* أصفر عسيري */
+    color: #7b2e2e;
+}
+
+.dashboard-content, .cms-content {
+    background-color: #fdf7f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.stats-section h2, .landmark-list h2 {
+    border-bottom: 2px solid #e0dcd3;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.stats-grid, .charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card, .chart-box {
+    background-color: #f6f1ed;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.stat-card h3, .chart-box h3 {
+    margin-top: 0;
+    color: #2f6f7e; /* أزرق عسيري */
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    background-color: #2f6f7e; /* أزرق */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #255962;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f3c969; /* أصفر */
+    color: #7b2e2e;
+}
+
+table tr:hover {
+    background-color: #fcf5e8;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    margin: 0 3px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-btn {
+    background-color: #2f6f7e;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #255962;
+}
+
+.delete-btn {
+    background-color: #b0413e;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #912f2d;
+}
+
+.landmark-form {
+    background-color: #fffaf3;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.landmark-form h2 {
+    margin-top: 0;
+    color: #7b2e2e;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2f2f2f;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.primary-btn {
+    background-color: #2f6f7e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background-color: #255962;
+}
+
+.secondary-btn {
+    background-color: #f3c969;
+    color: #7b2e2e;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background-color: #e2b844;
+}
+
+.danger-btn {
+    background-color: #b0413e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.danger-btn:hover {
+    background-color: #912f2d;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fefefe;
+}
+
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box h1 {
+    margin-top: 0;
+    color: #7b2e2e;
+}
+
+.login-btn {
+    background-color: #2f6f7e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #255962;
+}
+/* ========== RESET ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+  background-color: #fefcf9;
+  color: #2b2b2b;
+  direction: rtl;
+}
+
+/* ========== Login Page ========== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #faf5f0; /* خلفية ناعمة */
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.admin-logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.login-box h1 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #7b2e2e; /* أحمر عسيري تراثي */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #2f6f7e;
+  outline: none;
+}
+
+.login-btn {
+  background-color: #2f6f7e; /* أزرق تراثي */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #255962;
+}
